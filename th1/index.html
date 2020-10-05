@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hiển thị đầu ra</title>
+  </head>
+  <body>
+    <div id="MessegeDiv"></div>
+    <button type="button" onclick="showMassege();">Click Me!</button>
+
+    <script>
+      function showMassege() {
+        alert("Xin chào!");
+      }
+    </script>
+
+    <script>
+      function showMassege() {
+        document.getElementById("MessegeDiv").innerHTML = "Xin chào!";
+      }
+    </script>
+  </body>
+</html>
