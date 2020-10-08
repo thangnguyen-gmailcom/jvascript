@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Caculator</title>
+    <style>
+      .caculator {
+        width: 400px;
+        height: 400px;
+      }
+      .Second input {
+        width: 165px;
+        height: 40px;
+        margin-bottom: 20px;
+      }
+      .first input {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="caculator">
+      <div class="Second">
+        <input type="text" id="result" />
+      </div>
+      <div class="first">
+        <input
+          type="button"
+          id="one"
+          value="1"
+          onclick="result.value += this.value"
+        />
+        <input
+          type="button"
+          id=""
+          value="2"
+          onclick="result.value += this.value"
+        />
+        <input
+          type="button"
+          id=""
+          value="3"
+          onclick="result.value += this.value"
+        />
+        <input
+          type="button"
+          id=""
+          value="+"
+          onclick="result.value += this.value"
+        />
+      </div>
+      <div class="first">
+        <input
+          type="button"
+          id=""
+          value="4"
+          onclick="result.value += this.value"
+        />
+        <input
+          type="button"
+          id=""
+          value="5"
+          onclick="result.value += this.value"
+        />
+        <input
+          type="button"
+          id=""
+          value="6"
+          onclick="result.value += this.value"
+        />
+        <input
+          type="button"
+          id=""
+          value="-"
+          onclick="result.value+=this.value"
+        />
+      </div>
+      <div class="first">
+        <input
+          type="button"
+          id=""
+          value="7"
+          onclick="result.value += this.value"
+        />
+        <input
+          type="button"
+          id=""
+          value="8"
+          onclick="result.value += this.value"
+        />
+        <input
+          type="button"
+          id=""
+          value="9"
+          onclick="result.value += this.value"
+        />
+        <input
+          type="button"
+          id=""
+          value="*"
+          onclick="result.value +=this.value"
+        />
+      </div>
+      <div class="first">
+        <input type="button" id="" value="C" onclick="result.value=''" />
+        <input
+          type="button"
+          id=""
+          value="0"
+          onclick="result.value +=
+        this.value"
+        />
+        <input
+          type="button"
+          id=""
+          value="="
+          onclick="result.value = eval(result.value)"
+        />
+        <input
+          type="button"
+          id=""
+          value="/"
+          onclick="result.value += this.value"
+        />
+      </div>
+    </div>
+  </body>
+</html>
