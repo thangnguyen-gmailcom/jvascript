@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let testScores = parseInt(prompt(" enter the score"));
+      let midTest = parseInt(prompt("enter the score"));
+      let finalTest = parseInt(prompt("enter the score"));
+      let sumScore = (testScores + midTest + finalTest) / 3;
+      if (sumScore < 5) {
+        document.write("Học lực yếu");
+      } else if (sumScore < 7) {
+        document.write("Học lưc trung bình");
+      } else if (sumScore < 8.5) {
+        document.write("Học lực khá");
+      } else if (sumScore < 11) {
+        document.write("Học lực xuất sắc");
+      }
+    </script>
+  </body>
+</html>
