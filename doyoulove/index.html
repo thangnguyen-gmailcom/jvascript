@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Do you love</title>
+  </head>
+  <body>
+    <h2>Do you lowve?</h2>
+    <input type="button" value="Yes" onclick="yes()" />
+    <input
+      type="button"
+      value="No"
+      onmouseover="no()"
+      id="No"
+      style="position: relative; left: 0; top: 0"
+    />
+
+    <script>
+      function yes() {
+        alert("<3");
+      }
+      let maxWidth;
+      let maxHeight;
+      function windowMax() {
+        maxWidth = window.innerWidth - 500;
+        maxHeight = window.innerHeight - 500;
+      }
+      windowMax();
+      function no() {
+        document.getElementById("No").style.left =
+          Math.floor(Math.random() * maxWidth) + "px";
+        document.getElementById("No").style.top =
+          Math.floor(Math.random() * maxHeight) + "px";
+      }
+    </script>
+  </body>
+</html>
