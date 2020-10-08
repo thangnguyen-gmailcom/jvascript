@@ -3,28 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Currency conversion</title>
   </head>
   <body>
-    <div>
-      <label>Amount</label>
-      <input type="text" id="amo" />
-      <label>From Currency</label>
-      <select id="From">
-        <option value="VietNam">VietNam</option>
-        <option value="USD">USD</option>
-        <option value="Euro">Euro</option>
-      </select>
-      <label>To Currency</label>
-      <select id="To">
-        <option value="USD">USD</option>
-        <option value="VietNam">VietNam</option>
-        <option value="Euro">Euro</option>
-      </select>
-      <input type="submit" value="Convert" onclick="myFunction" />
-      <p id="demo"></p>
+    <label>Amount</label>
+    <input type="text" id="amount" />
+    <label>From Currency</label>
+    <select name="Currency" id="from">
+      <option value="VND">VietNam</option>
+      <option value="USD">USD</option>
+      <option value="Euro">Euro</option>
+    </select>
+    <label>To Currency</label>
+    <select name="Currency" id="to">
+      <option value="VND">VietNam</option>
+      <option value="USD">USD</option>
+      <option value="Euro">Euro</option>
+    </select>
+    <input type="submit" onclick="show()" />
+    <p id="demo"></p>
 
-      <script src="text.js"></script>
-    </div>
+    <script src="currency.js"></script>
   </body>
 </html>
