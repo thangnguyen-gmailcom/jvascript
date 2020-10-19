@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <input type="text" name="English" id="English" />
+      <input type="button" value="dictionary" onclick="dictionary()" />
+      <p id="demo"></p>
+    </div>
+
+    <script>
+      let eng = ["fruit", "Soccer", "Ping pong"];
+      let vn = ["Trái cây", "Bóng đá", "Bóng bàn"];
+      let english = document.getElementById("English");
+      let result = document.getElementById("demo");
+      function dictionary() {
+        let eL = english.value;
+        let found = false;
+        for (let i = 0; i <= eng.length; i++) {
+          if (eL === eng[i]) {
+            result.innerText = vn[i];
+            found = true;
+            break;
+          }
+        }
+        if (!found) {
+          alert("Không tìm thấy !");
+        }
+      }
+    </script>
+  </body>
+</html>
