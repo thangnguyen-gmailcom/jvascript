@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Caro Game Simple</h2>
+    <p id="carogame"></p>
+    <input type="button" value="Change value" onclick="changeValue()" />
+
+    <script>
+      let b = document.getElementById("carogame");
+      let nguoichoi = "X";
+      let board = [];
+      let data = "";
+      for (let i = 0; i < 3; i++) {
+        board[i] = [".", ".", "."];
+      }
+      for (let i = 0; i < 3; i++) {
+        data += "<br>";
+        for (let j = 0; j < 3; j++) {
+          data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+        }
+      }
+      b.innerHTML = data;
+      // nhap x vao vi tri ban co
+
+      function changeValue() {
+        let positionX = prompt("X: ");
+        let positionY = prompt("Y: ");
+        data = "";
+        board[positionX][positionY] = "X";
+        for (let i = 0; i < 3; i++) {
+          data += "<br/>";
+          for (let j = 0; j < 3; j++) {
+            data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+          }
+        }
+        b.innerHTML = "<hr/>" + data;
+        lanluot();
+      }
+      //xac dinh x hay o danh
+      function lanluot() {
+        let i;
+        let j;
+        if (board[i][j] == "X") {
+          board[i][j] = "O";
+        } else {
+          board[i][j] = "X";
+        }
+      }
+      //xac dinh chien thang
+    </script>
+  </body>
+</html>
