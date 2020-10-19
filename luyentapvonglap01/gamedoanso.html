@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="play" onclick="gameGuessNumber()">
+    
+
+    <script>
+        function gameGuessNumber(){
+            let s = prompt("enter range")
+            let n = prompt("enter your number");
+            let r = Math.floor(Math.random()*s);
+            if(n==r){
+                alert("Congratulation! You win.");
+            }else {
+                if (n<r){
+                    alert("your number to small");
+                }else{
+                    alert("your number to big");
+                }
+                alert("luot 2");
+                let t = prompt("enter younumber");
+                if(t==r){
+                    alert("Congratulation! You win.");
+                }else{
+                    if (t<r){
+                        alert("your number to small");
+                    }else{
+                        alert("your number to big");
+                }
+                alert("luot 3");
+                let v = prompt("enter younumber");
+                if (v==r){
+                    alert("Congratulation! You win.")
+                }else{
+                    alert("game over "+r);
+                }
+                }
+            }
+        }
+        
+    </script>
+</body>
+</html>
