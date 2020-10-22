@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let star = prompt("nhap ten ngoi sao");
+      let stars = [
+        "Polaris",
+        "Aldebaran",
+        "Deneb",
+        "Vega",
+        "Altair",
+        "Dubhe",
+        "Regulus",
+      ];
+      let constellation = [
+        "Ursa Minor",
+        "Tarurus",
+        "Cygnus",
+        "Lyra",
+        "Aquila",
+        "Ursa Major",
+        "Leo",
+      ];
+      function strat() {
+        let st = star;
+        let found = false;
+        for (let i = 0; i < stars.length; i++) {
+          if (st === stars[i]) {
+            alert(constellation[i]);
+            found = true;
+            break;
+          }
+        }
+        if (!found) {
+          alert("khong tim thay");
+        }
+      }
+      strat();
+    </script>
+  </body>
+</html>

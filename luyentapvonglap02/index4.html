@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = prompt("enter your number");
+        let m = prompt("enter your number");
+        for(i = 1; i<=n; i++){
+            for(k=1;k<=m;k++){
+                if(i==1 || k==1 || i==n || k==m){
+                    document.write("*");
+                }
+                else{
+                    document.write("&nbsp&nbsp");
+                }
+            }document.write("<br>")
+        }
+    </script>
+</body>
+</html>

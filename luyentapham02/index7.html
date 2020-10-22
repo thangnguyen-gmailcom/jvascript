@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let fisrt = prompt("enter in the number");
+      let second = prompt("enter in the number");
+      document.write(
+        "truoc khi doi cho :" + "a =" + fisrt + "b =" + second + "<br>"
+      );
+      function changePlaces() {
+        let c = fisrt;
+        fisrt = second;
+        second = c;
+        document.write(
+          "sau khi doi cho :" + "a =" + fisrt + "b =" + second + "<br>"
+        );
+      }
+      changePlaces();
+    </script>
+  </body>
+</html>

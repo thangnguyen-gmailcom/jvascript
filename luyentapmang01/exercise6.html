@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let V = 6;
+      let temp = false;
+      let arr = new Array(1, 2, 3, 4, 5, 7, 8);
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === V) {
+          document.write("V is in the array");
+          temp = true;
+          break;
+        }
+      }
+      if (!temp) {
+        document.write("V is not in the array");
+      }
+    </script>
+  </body>
+</html>

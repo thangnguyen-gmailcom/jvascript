@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <label>Feet:</label>
+      <input type="text" id="amount" />
+    </div>
+    <div>
+      <label>Meter:</label>
+      <input type="text" id="amount2" />
+    </div>
+    <div>
+      <input type="button" value="convertMeter" onclick="convertMeter()" />
+      <input type="button" value="convertFeet" onclick="convertFeet()" />
+    </div>
+    <p id="result"></p>
+
+    <script>
+      let amountDom = document.getElementById("amount");
+      let resultDom = document.getElementById("result");
+      let amount2Dom = document.getElementById("amount2");
+      function feetToMeter(feet) {
+        return 0.305 * feet;
+      }
+      function meterToFeet(meter) {
+        return 3.279 * meter;
+      }
+      function convertMeter() {
+        amount2Dom.value = " ";
+        resultDom.innerHTML = feetToMeter(amountDom.value);
+      }
+      function convertFeet() {
+        amountDom.value = " ";
+        resultDom.innerHTML = meterToFeet(amount2Dom.value);
+      }
+    </script>
+  </body>
+</html>

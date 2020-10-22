@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: monospace;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = prompt("enter your number n");
+            for(i=1;i<=n;i++){
+                for(k = 1; k <= i; k++){
+                    document.write("*");
+                }
+                document.write("<br>");
+            }document.write("<br>")
+
+
+        let a = prompt("enter your number a");
+            for(i=1; i<= a; i ++){
+                for(j =a ; i <= j; j--){
+                    document.write("*");
+                }
+                document.write("<br>");
+            }document.write("<br>")
+
+            let c = prompt("enter your number c");
+        for(i=0; i<=c; i++){
+                for(j =c ; i <= j; j--){
+                    document.write("&nbsp");
+                }
+                for(j=1 ; j<=i; j++){
+                    document.write("*");
+                }
+                document.write("<br>")
+            }document.write("<br>")
+
+        let b = prompt("enter your number b");
+            for(i=0; i<b; i++){
+                for(j=0; j<i; j++ ){
+                    document.write("&nbsp");
+                }
+                for(j=i; j< b; j++){
+                    document.write("*");
+                }
+                document.write("<br>")
+            }
+    </script>
+</body>
+</html>

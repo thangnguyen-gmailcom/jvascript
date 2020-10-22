@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let n = new Array(18, 2, 5, 7, 25, 9, 10, 21, 23, 24);
+      let max = n[0];
+      for (let i = 0; i <= n.length - 1; i++) {
+        if (max < n[i]) {
+          max = n[i];
+          index = i;
+        }
+      }
+      document.write(
+        "giá trị lớn nhất của mảng là : " + max + "<br>" + "vị trí là :" + index
+      );
+    </script>
+  </body>
+</html>

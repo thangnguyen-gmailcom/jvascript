@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let n = prompt("enter a string :");
+      let count = 0;
+      for (let i = 0; i < n.length; i++) {
+        if (
+          n[i] == "o" ||
+          n[i] == "u" ||
+          n[i] == "a" ||
+          n[i] == "e" ||
+          n[i] == "i"
+        ) {
+          count++;
+        }
+      }
+      document.write(" số nguyên âm trong chuỗi là : " + count);
+    </script>
+  </body>
+</html>

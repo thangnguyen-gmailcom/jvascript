@@ -23,40 +23,73 @@
       for (let i = 0; i < 3; i++) {
         board[i] = [".", ".", "."];
       }
-      for (let i = 0; i < 3; i++) {
-        data += "<br>";
-        for (let j = 0; j < 3; j++) {
-          data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+      function init() {
+        for (let i = 0; i < 3; i++) {
+          data += "<br>";
+          for (let j = 0; j < 3; j++) {
+            data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+          }
         }
+        b.innerHTML = "<hr>" + data;
       }
-      b.innerHTML = data;
+
       // nhap x vao vi tri ban co
 
       function changeValue() {
         let positionX = prompt("X: ");
         let positionY = prompt("Y: ");
         data = "";
-        board[positionX][positionY] = "X";
-        for (let i = 0; i < 3; i++) {
-          data += "<br/>";
-          for (let j = 0; j < 3; j++) {
-            data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
-          }
-        }
-        b.innerHTML = "<hr/>" + data;
+        board[positionX][positionY] = nguoichoi;
+        init();
         lanluot();
+        check();
       }
       //xac dinh x hay o danh
       function lanluot() {
-        let i;
-        let j;
-        if (board[i][j] == "X") {
-          board[i][j] = "O";
+        if (nguoichoi == "X") {
+          nguoichoi = "O";
         } else {
-          board[i][j] = "X";
+          nguoichoi = "X";
         }
       }
-      //xac dinh chien thang
+
+      function check3Cells(x1, y1, x2, y2, x3, y3) {
+        return (
+          board[x1][y1] !== "." &&
+          board[x1][y1] === board[x2][y2] &&
+          board[x1][y1] === board[x3][y3]
+        );
+      }
+      function check() {
+        if (youWin() == true) {
+          alert("Congratulation player :" + board[i][j] + "win");
+        }
+      }
+      // xac dinh chien thang
+      function youWin() {
+        let temp = false;
+        for (i = 0; i < 3; i++) {
+          for (j = 0; j < 3; j++) {
+            if (check3Cells(i, j, i, j + 1, i, j + 2)) {
+              // alert(nguoichoi + "win");
+              return (temp = true);
+            }
+            if (check3Cells(i, j, i + 1, j, i + 2, j)) {
+              // alert(nguoichoi + "win");
+              return (temp = true);
+            }
+            if (check3Cells(i, j, i + 1, j + 1, i + 2, j + 2)) {
+              // alert(nguoichoi + "win");
+              return (temp = true);
+            }
+            if (check3Cells(0, 2, 1, 1, 2, 0)) {
+              // alert(nguoichoi + "win");
+              return (temp = true);
+            }
+          }
+        }
+      }
+      init();
     </script>
   </body>
 </html>

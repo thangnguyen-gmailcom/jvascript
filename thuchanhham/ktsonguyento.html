@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="amount" />
+    <input type="button" value="print" onclick="printPrimeNumber()" />
+    <p id="result"></p>
+    <script>
+      let amounts = document.getElementById("amount");
+      let resultDom = document.getElementById("result");
+      function printPrimeNumber() {
+        let res = "";
+        for (let num = 0; num <= parseInt(amounts.value); num++) {
+          if (isPrime(num)) {
+            // arr.push(number);
+            res += "Số nguyên tố là: " + num + "<br>";
+          }
+        }
+
+        resultDom.innerHTML = res;
+      }
+      function isPrime(number) {
+        let temp = false;
+        if (number < 2) {
+          return (temp = false);
+        }
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+          if (number % i == 0) {
+            return (temp = false);
+          }
+        }
+        return (temp = true);
+      }
+    </script>
+  </body>
+</html>

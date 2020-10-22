@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let array = ["a", "b", "d", "a", "d", "g", "h", "t", 5, "7", "$"];
+      let V = prompt("enter the character");
+      let count = 0;
+      function checkArray() {
+        for (i = 0; i < array.length; i++) {
+          if (V == array[i]) {
+            count++;
+          }
+        }
+        if (count == 0) {
+          document.write("-1");
+        } else {
+          document.write(count);
+        }
+      }
+      checkArray();
+    </script>
+  </body>
+</html>
