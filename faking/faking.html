@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Type anthing slowly</h2>
+    <textarea
+      name=""
+      id="faking"
+      cols="80"
+      rows="10"
+      onkeydown="Faking()"
+    ></textarea>
+
+    <script>
+      const fakingInput = document.getElementById("faking");
+      let toStr = "hello my name is thang. I'm 24 years old !";
+      let arr = toStr.split("");
+      function Faking() {
+        fakings = fakingInput.value;
+        array = fakings.split("");
+        j = fakings.length;
+        for (let i = 0; i < j; i++) {
+          array[i] = arr[i];
+          if (j > arr.length) {
+            fakings = "";
+            array = [];
+          }
+        }
+
+        fakingInput.value = array.join("");
+      }
+    </script>
+  </body>
+</html>
